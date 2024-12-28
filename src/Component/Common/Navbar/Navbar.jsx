@@ -30,16 +30,16 @@ const Navbar = () => {
 
 
     const NavLink = <>
-        <a href="#" className="text-[#00233F] font-semibold">Home</a>
-        <a href="#" className="text-[#00233F] font-semibold">Blog</a>
-        <a href="#" className="text-[#00233F] font-semibold">Services</a>
-        <a href="#" className="text-[#00233F] font-semibold">About Us</a>
-        <a href="#" className="text-[#00233F] font-semibold">Reviews</a>
-        <a href="#" className="text-[#00233F] font-semibold">Why Us</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Home</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Blog</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Services</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">About Us</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Reviews</a>
+        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Why Us</a>
     </>
 
     return (
-        <nav className={`fixed top-0 left-0 w-full   lg:py-4  transition-colors duration-300 ${isScrolled
+        <nav className={`fixed top-0 left-0 w-full   lg:py-4 z-50 transition-colors duration-300 ${isScrolled
             ? "  backdrop-blur-lg   shadow-lg"
             : "bg-transparent"
             }`}>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 {/* Button */}
                 <div className="hidden md:block">
 
-                    <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium">
+                    <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
                         Contact Us
                     </button>
                 </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
                 <div
                     className={`${menuOpen ? "translate-x-0" : "-translate-x-full"
-                        } fixed left-0 top-0 w-3/4 h-full bg-white shadow-lg p-6 transition-transform duration-300`}
+                        } fixed left-0 top-0 w-3/4 h-full bg-white shadow-lg p-6 transition-transform duration-300 z-50`}
                 >
                     {/*  */}
                     <button onClick={toggleMenu} className="text-3xl border rounded-full p-2">
@@ -98,9 +98,9 @@ const Navbar = () => {
 
                         {NavLink}
 
-                        <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium">
-                           Contact Us
-                        </button>
+                        <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
+                        Contact Us
+                    </button>
                     </div>
                 </div>
             </div>
