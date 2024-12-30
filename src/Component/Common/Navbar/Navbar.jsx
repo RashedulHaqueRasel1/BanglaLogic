@@ -30,52 +30,57 @@ const Navbar = () => {
 
 
     const NavLink = <>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Home</a>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Blog</a>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Services</a>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">About Us</a>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Reviews</a>
-        <a href="#" className="text-[#00233F] font-semibold hover:text-[#005397]">Why Us</a>
+        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
+        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
+        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
+        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">About Us</p></Link>
+        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
+
     </>
 
     return (
-        <nav className={`fixed top-0 left-0 w-full   lg:py-4 z-50 transition-colors duration-300 ${isScrolled
-            ? "  backdrop-blur-lg   shadow-lg"
-            : "bg-transparent"
-            }`}>
-            {/* Navbar Container */}
-            <div className="flex justify-between  items-center font-semibold mx-auto container p-4 md:p-0">
-                {/* Logo */}
-                <Link to={'/'}>
-                    <h1 className="text-3xl lg:text-5xl text-[#005397] font-bold font-WorkSans">Bangla Logic</h1>
-                </Link>
+        <div>
+            <nav className={`fixed top-0 left-0 w-full   lg:py-4 z-40 transition-colors duration-300 ${isScrolled
+                ? "  backdrop-blur-lg   shadow-lg"
+                : "bg-transparent"
+                }`} >
 
-                {/* Desktop Menu */}
-                <div className="hidden md:flex xl:gap-10 md:gap-8 gap-2">
-                    {NavLink}
+                {/* Navbar Container */}
+                <div className="flex justify-between  items-center font-semibold mx-auto container p-4 md:p-0">
+                    {/* Logo */}
+                    <Link to={'/'}>
+                        <h1 className="text-3xl lg:text-5xl text-[#005397] font-bold font-WorkSans">Bangla Logic</h1>
+                    </Link>
+
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex xl:gap-10 md:gap-8 gap-2">
+                        {NavLink}
+                    </div>
+
+                    {/* Button */}
+                    <div className="hidden md:block">
+
+                        <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
+                            Contact Us
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Icon */}
+                    <div className="md:hidden">
+
+                        {
+                            menuOpen ?
+                                <></>
+                                :
+                                <button onClick={toggleMenu} className="text-3xl ">
+                                    <FiMenu />
+                                </button>
+                        }
+                    </div>
                 </div>
+            </nav>
 
-                {/* Button */}
-                <div className="hidden md:block">
 
-                    <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
-                        Contact Us
-                    </button>
-                </div>
-
-                {/* Mobile Menu Icon */}
-                <div className="md:hidden">
-
-                    {
-                        menuOpen ?
-                            <></>
-                            :
-                            <button onClick={toggleMenu} className="text-3xl ">
-                                <FiMenu />
-                            </button>
-                    }
-                </div>
-            </div>
 
             {/* Mobile Menu - Slide-in from Left */}
 
@@ -99,14 +104,13 @@ const Navbar = () => {
                         {NavLink}
 
                         <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
-                        Contact Us
-                    </button>
+                            Contact Us
+                        </button>
                     </div>
                 </div>
             </div>
 
-
-        </nav>
+        </div>
     );
 };
 

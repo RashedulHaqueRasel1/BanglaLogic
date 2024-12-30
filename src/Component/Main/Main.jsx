@@ -13,6 +13,7 @@ const Main = () => {
 
             {/* Footer */}
             <Footer></Footer>
+
         </div>
     );
 };
