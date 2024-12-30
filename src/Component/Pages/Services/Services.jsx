@@ -31,17 +31,22 @@ const Services = () => {
 
 
 
-            <div className='flex flex-col-reverse lg:flex-row items-center justify-around w-full  border  my-20'>
-                <div className='w-1/2'>
-                    <h1 className='text-5xl font-semibold w-3/4 leading-snug'>We help teams build the business of their dreams</h1>
-                    <p className='text-xl opacity-60 leading-snug py-4 w-6/7'>Et in risus egestas nec vitae odio ac nibh vestibulum volutpat aliquet aenean erat lobortis non.
+            <div className='flex flex-col-reverse lg:flex-row col-span-2 items-center justify-between p-4 w-full   my-20'>
+                {/* Text Section */}
+                <div className='lg:w-1/2 text-center lg:text-left p-2'>
+                    <h1 className='text-3xl lg:text-5xl font-semibold lg:w-3/4 leading-snug mt-4  lg:mx-0'>We help teams build the business of their dreams</h1>
+                    <p className='text-xl opacity-60 leading-snug py-4 w-6/7  lg:mx-0 text-left'><br />Et in risus egestas nec vitae odio ac nibh vestibulum volutpat aliquet aenean erat lobortis non.
+                    <br />
+                    <br />
                         Nibh egestas dictumst cursus est turpis quis tincidunt pulvinar maecenas eget massa vel, ante nam blandit egestas enim id quis sit maecenas id nunc tempus auctor orci, enim imperdiet proin nibh mattis.</p>
                 </div>
 
-                <div className='w-1/2'>
-                    <img src={aboutUs} alt="About Us" className=''/>
+                {/* Image Section */}
+                <div className='lg:w-1/2 flex justify-center lg:justify-end  '>
+                    <img src={aboutUs} alt="About Us" className='w-full h-full'/>
                 </div>
             </div>
+
 
 
         </div>

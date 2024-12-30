@@ -25,7 +25,7 @@ const Banner = () => {
                 {/* Right Side */}
                 <div className="">
                     <div>
-                        <Lottie animationData={Banner_Animation} loop={true} className="object-contain h-full lg:h-96 mt-[500px] lg:mt-0 z-0" />
+                        <Lottie animationData={Banner_Animation} loop={true} className="object-contain h-full lg:h-96 mt-[450px] lg:mt-0 z-0" />
                     </div>
                 </div>
 

@@ -11,8 +11,6 @@ const data = [
 
 ]
 
-console.log(data)
-
 const OurHelp = () => {
     return (
         <div className=" bg-[#F5F5F5]">
