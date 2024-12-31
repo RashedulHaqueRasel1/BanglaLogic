@@ -1,5 +1,6 @@
 // import Navbar from "../../Common/Navbar/Navbar";
 import Blogs from "../Blogs/Blogs";
+import Contact from "../Contact/Contact";
 import OurHelp from "../OurHelp/OurHelp";
 import Services from "../Services/Services";
 import WhyUs from "../WhyUs/WhyUs";
@@ -22,6 +23,8 @@ const Home = () => {
             <WhyUs></WhyUs>
 
             <Blogs></Blogs>
+
+            <Contact></Contact>
         </div>
     );
 };
