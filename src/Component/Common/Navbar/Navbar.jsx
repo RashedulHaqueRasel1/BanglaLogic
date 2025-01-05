@@ -30,11 +30,11 @@ const Navbar = () => {
 
 
     const NavLink = <>
-        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
-        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
-        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
-        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">About Us</p></Link>
-        <Link to={'/#blog'}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
+        <Link onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
+        <Link onClick={() => document.getElementById("Services").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
+        <Link onClick={() => document.getElementById("WhyUs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
+        <Link onClick={() => document.getElementById("Blogs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
+
 
     </>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
                 {/* Navbar Container */}
                 <div className="flex justify-between  items-center font-semibold mx-auto container p-4 md:p-0">
                     {/* Logo */}
-                    <Link to={'/'}>
+                    <Link onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}>
                         <h1 className="text-3xl lg:text-5xl text-[#005397] font-bold font-WorkSans">Bangla Logic</h1>
                     </Link>
 
@@ -60,9 +60,11 @@ const Navbar = () => {
                     {/* Button */}
                     <div className="hidden md:block">
 
-                        <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
-                            Contact Us
-                        </button>
+                        <Link onClick={() => document.getElementById("Contact").scrollIntoView({ behavior: "smooth" })}>
+                            <p className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
+                                Contact Us
+                            </p>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Icon */}
@@ -103,9 +105,11 @@ const Navbar = () => {
 
                         {NavLink}
 
-                        <button className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
-                            Contact Us
-                        </button>
+                        <Link onClick={() => document.getElementById("Contact").scrollIntoView({ behavior: "smooth" })}>
+                            <p className="py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out">
+                                Contact Us
+                            </p>
+                        </Link>
                     </div>
                 </div>
             </div>

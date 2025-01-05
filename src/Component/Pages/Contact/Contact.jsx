@@ -114,17 +114,17 @@ const Contact = () => {
                                     <div className="mb-6">
                                         <div className="mx-0 mb-1 sm:mb-4">
                                             <div className="mx-0 mb-1 sm:mb-4">
-                                                <label   className="pb-1 text-xs uppercase tracking-wider"></label><input type="text"   placeholder="Your name" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"  name="user_name" required/>
+                                                <label   className="pb-1 text-xs uppercase tracking-wider"></label><input type="text"   placeholder="Your name" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0"  name="user_name" required/>
                                             </div>
                                             <div className="mx-0 mb-1 sm:mb-4">
-                                                <label  className="pb-1 text-xs uppercase tracking-wider"></label><input type="email"    placeholder="example@gmail.com" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="user_email" required/>
+                                                <label  className="pb-1 text-xs uppercase tracking-wider"></label><input type="email"    placeholder="example@gmail.com" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0" name="user_email" required/>
                                             </div>
                                             <div className="mx-0 mb-1 sm:mb-4">
-                                                <label  className="pb-1 text-xs uppercase tracking-wider"></label><input type="text"    placeholder="Subject" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="user_subject" required/>
+                                                <label  className="pb-1 text-xs uppercase tracking-wider"></label><input type="text"    placeholder="Subject" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0" name="user_subject" required/>
                                             </div>
                                         </div>
                                         <div className="mx-0 mb-1 sm:mb-4">
-                                            <label  className="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea" name="message" cols="30" rows="5" placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" required></textarea>
+                                            <label  className="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea" name="message" cols="30" rows="5" placeholder="Write your message..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0" required></textarea>
                                         </div>
                                     </div>
                                     <div className="text-center">

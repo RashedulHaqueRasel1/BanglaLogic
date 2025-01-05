@@ -1,4 +1,5 @@
-// import Navbar from "../../Common/Navbar/Navbar";
+import Footer from "../../Common/Footer/Footer";
+import Navbar from "../../Common/Navbar/Navbar";
 import Blogs from "../Blogs/Blogs";
 import Contact from "../Contact/Contact";
 import OurHelp from "../OurHelp/OurHelp";
@@ -9,24 +10,43 @@ import Banner from "./Banner/Banner";
 const Home = () => {
     return (
         <div>
-            {/* <Navbar></Navbar> */}
+            {/* Navbar Section */}
+            <Navbar />
+
             {/* Banner Section */}
-            <Banner></Banner>
+            <div id="Home">
+                <Banner />
+            </div>
 
-            {/* How We Help Section */}
-            <section id="blog" className="pt-60 lg:py-0">
-                <OurHelp></OurHelp>
-            </section>
+            {/* Our Help Section */}
+            <div>
+                <OurHelp />
+            </div>
+            {/* Services Section */}
+            <div id="Services">
+                <Services />
+            </div>
 
-            <Services></Services>
+            {/* WhyUs Section */}
+            <div id="WhyUs">
+                <WhyUs />
+            </div>
 
-            <WhyUs></WhyUs>
+            {/* Blogs Section */}
+            <div id="Blogs">
+                <Blogs />
+            </div>
 
-            <Blogs></Blogs>
+            {/* Contact Section */}
+            <div id="Contact">
+                <Contact />
+            </div>
 
-            <Contact></Contact>
+            {/* Footer Section */}
+            <Footer />
         </div>
     );
 };
 
 export default Home;
+
