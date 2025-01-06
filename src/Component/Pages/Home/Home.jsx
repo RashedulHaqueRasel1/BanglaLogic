@@ -1,11 +1,12 @@
 import Footer from "../../Common/Footer/Footer";
 import Navbar from "../../Common/Navbar/Navbar";
-import Blogs from "../Blogs/Blogs";
-import Contact from "../Contact/Contact";
-import OurHelp from "../OurHelp/OurHelp";
-import Services from "../Services/Services";
-import WhyUs from "../WhyUs/WhyUs";
 import Banner from "./Banner/Banner";
+import Contact from "./Contact/Contact";
+import HomeBlogs from "./HomeBlogs/HomeBlogs";
+import OurHelp from "./OurHelp/OurHelp";
+import Services from "./Services/Services";
+import WhyUs from "./WhyUs/WhyUs";
+ 
 
 const Home = () => {
     return (
@@ -34,7 +35,7 @@ const Home = () => {
 
             {/* Blogs Section */}
             <div id="Blogs">
-                <Blogs />
+                <HomeBlogs />
             </div>
 
             {/* Contact Section */}

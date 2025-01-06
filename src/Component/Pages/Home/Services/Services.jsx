@@ -1,8 +1,8 @@
 
-import web from './../../../assets/web.jpg'
-import graphic from './../../../assets/graphic.jpg'
-import branding from './../../../assets/branding.jpg'
-import aboutUs from './../../../assets/about-us.jpg'
+import web from './../../../../assets/web.jpg'
+import graphic from './../../../../assets/graphic.jpg'
+import branding from './../../../../assets/branding.jpg'
+import aboutUs from './../../../../assets/about-us.jpg'
 
 const data = [
     { title: "Branding Design", image: web, text: "Sem quis erat nibh id neque tincidunt molestie convallis ut nibh vel, lorem consequat ullamcorper." },

@@ -52,7 +52,7 @@ const sortedBlogs = blogs.sort((a, b) => {
 });
 
 
-const Blogs = () => {
+const HomeBlogs = () => {
     return (
         <div>
             <section className=" py-28">
@@ -112,4 +112,4 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default HomeBlogs;
