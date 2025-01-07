@@ -30,7 +30,7 @@ const Navbar = () => {
 
 
     const NavLink = <>
-        <Link onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
+        <Link to={'/'} onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
         <Link onClick={() => document.getElementById("Services").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
         <Link onClick={() => document.getElementById("WhyUs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
         <Link onClick={() => document.getElementById("Blogs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
                 {/* Navbar Container */}
                 <div className="flex justify-between  items-center font-semibold mx-auto container p-4 md:p-0">
                     {/* Logo */}
-                    <Link onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}>
+                    <Link onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })} to={'/'}>
                         <h1 className="text-3xl lg:text-5xl text-[#005397] font-bold font-WorkSans">Bangla Logic</h1>
                     </Link>
 

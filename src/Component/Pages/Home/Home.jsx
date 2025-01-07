@@ -1,5 +1,4 @@
-import Footer from "../../Common/Footer/Footer";
-import Navbar from "../../Common/Navbar/Navbar";
+
 import Banner from "./Banner/Banner";
 import Contact from "./Contact/Contact";
 import HomeBlogs from "./HomeBlogs/HomeBlogs";
@@ -11,9 +10,7 @@ import WhyUs from "./WhyUs/WhyUs";
 const Home = () => {
     return (
         <div>
-            {/* Navbar Section */}
-            <Navbar />
-
+ 
             {/* Banner Section */}
             <div id="Home">
                 <Banner />
@@ -42,9 +39,7 @@ const Home = () => {
             <div id="Contact">
                 <Contact />
             </div>
-
-            {/* Footer Section */}
-            <Footer />
+ 
         </div>
     );
 };
