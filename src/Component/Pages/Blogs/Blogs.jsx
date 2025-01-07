@@ -82,7 +82,7 @@ const Blogs = () => {
                 {currentProducts.map((blog) => (
                     <div key={blog.id} className="">
                         <div className="relative overflow-hidden group">
-                            <Link to={`/BlogDetails/${blog._id}`}>
+                            <Link to={`/blogDetails/${blog._id}`}>
                                 {/* image */}
                                 <img
                                     src={blog.image}
@@ -98,7 +98,7 @@ const Blogs = () => {
                             </Link>
                         </div>
                         <Link to={`/blogDetails/${blog._id}`}>
-                            <h2 className="font-poppins text-2xl font-semibold mt-3 hover:text-primary">
+                            <h2 className="font-poppins text-2xl font-semibold mt-3 hover:underline">
                                 {blog.title}
                             </h2>
                         </Link>
@@ -114,7 +114,7 @@ const Blogs = () => {
 
                         <p className="text-gray-700 dark:text-gray-700 font-opensans">
                             {blog.description.slice(0, 110)}...
-                            <Link to={``} className="text-red-500">
+                            <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
                                 Read More
                             </Link>
                         </p>
