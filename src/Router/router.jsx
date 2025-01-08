@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
         {
           path: '/blogDetails/:id',
           element: <BlogDetails></BlogDetails>,
-          loader: ({params}) => fetch(`http://localhost:3000/blogs/${params.id}`)
+          loader: ({params}) => fetch(`https://bangla-logic-backend.vercel.app/blogs/${params.id}`)
         }
       ]
     }
