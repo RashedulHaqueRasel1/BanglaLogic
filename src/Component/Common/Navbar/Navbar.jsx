@@ -31,9 +31,9 @@ const Navbar = () => {
 
     const NavLink = <>
         <Link to={'/'} onClick={() => document.getElementById("Home").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Home</p></Link>
-        <Link onClick={() => document.getElementById("Services").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
-        <Link onClick={() => document.getElementById("WhyUs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
-        <Link onClick={() => document.getElementById("Blogs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
+        <Link to={'/'} onClick={() => document.getElementById("/Home/Services").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Services</p></Link>
+        <Link to={'/'} onClick={() => document.getElementById("/Home/WhyUs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Why Us</p></Link>
+        <Link to={'/'} onClick={() => document.getElementById("/Home/Blogs").scrollIntoView({ behavior: "smooth" })}><p className="text-[#00233F] text-xl font-semibold hover:text-[#005397]">Blog</p></Link>
 
 
     </>

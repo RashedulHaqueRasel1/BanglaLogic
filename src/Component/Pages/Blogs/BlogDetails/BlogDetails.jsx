@@ -75,9 +75,9 @@ const BlogDetails = () => {
                             <h1 className="text-gray-500 font-bold text-2xl">Recent Posts</h1>
                             <hr className="text-gray-500 mt-2" />
                             <div className="space-y-4 mt-6">
-                                {recentBlogs.slice(0, 4).map((blog) => (
+                                {recentBlogs.slice(0, 5).map((blog) => (
                                     <div key={blog._id} className="flex gap-4 items-start">
-                                        <a href={`/BlogDetails/${blog._id}`}>
+                                        <a href={`/blogDetails/${blog._id}`}>
                                             <img
                                                 src={blog.image}
                                                 alt=""
@@ -85,7 +85,7 @@ const BlogDetails = () => {
                                             />
                                         </a>
                                         <div>
-                                            <a href={`/BlogDetails/${blog._id}`}>
+                                            <a href={`/blogDetails/${blog._id}`}>
                                                 <h1 className="font-medium text-xl lg:text-[17px] text-gray-600 hover:text-primary hover:underline">
                                                     {blog.title}
                                                 </h1>

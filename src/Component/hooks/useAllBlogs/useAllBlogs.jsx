@@ -18,6 +18,9 @@ const useAllBlogs = () => {
     })
 
 
+    // console.log(blogs)
+
+
 
 
     return  [blogs,isLoading, refetch];

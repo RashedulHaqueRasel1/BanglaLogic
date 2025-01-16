@@ -5,12 +5,12 @@ import HomeBlogs from "./HomeBlogs/HomeBlogs";
 import OurHelp from "./OurHelp/OurHelp";
 import Services from "./Services/Services";
 import WhyUs from "./WhyUs/WhyUs";
- 
+
 
 const Home = () => {
     return (
         <div>
- 
+            {/* <Navbar></Navbar> */}
             {/* Banner Section */}
             <div id="Home">
                 <Banner />
@@ -21,25 +21,26 @@ const Home = () => {
                 <OurHelp />
             </div>
             {/* Services Section */}
-            <div id="Services">
+            <div id="/Home/Services">
                 <Services />
             </div>
 
             {/* WhyUs Section */}
-            <div id="WhyUs">
+            <div id="/Home/WhyUs">
                 <WhyUs />
             </div>
 
             {/* Blogs Section */}
-            <div id="Blogs">
+            <div id="/Home/Blogs">
                 <HomeBlogs />
             </div>
 
             {/* Contact Section */}
-            <div id="Contact">
+            <div id="/Home/Contact">
                 <Contact />
             </div>
- 
+
+            {/* <Footer></Footer> */}
         </div>
     );
 };

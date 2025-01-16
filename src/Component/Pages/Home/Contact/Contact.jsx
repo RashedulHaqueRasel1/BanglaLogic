@@ -165,7 +165,7 @@ const Contact = () => {
                                     </div>
                                     <div className="text-center">
                                         <button type="submit"
-                                            className={`text-black bg-blue-600 border-0 py-2 px-6 focus:outline-none rounded text-lg mt-2 text-center ${isFormValid ? '' : 'opacity-50 cursor-not-allowed'}`}
+                                            className={`py-4 px-8 bg-[#005397] text-[#FFFFFF] rounded-full font-medium hover:bg-transparent  border border-[#005397] hover:text-[#005397] transition duration-500 ease-in-out${isFormValid ? '' : 'bg-opacity-45 cursor-not-allowed'}`}
                                             disabled={!isFormValid}>Send Message</button>
                                     </div>
                                 </form>

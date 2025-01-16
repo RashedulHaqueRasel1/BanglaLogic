@@ -8,7 +8,7 @@ const HomeBlogs = () => {
     // console.log(blogs)
 
     // Sort blogs by date in descending order (most recent first)
-    const sortedBlogs = blogs.sort((a, b) => {
+    const sortedBlogs = blogs?.sort((a, b) => {
         const dateA = new Date(a.date.split("/").reverse().join("-"));
         const dateB = new Date(b.date.split("/").reverse().join("-"));
         return dateB - dateA;
@@ -32,7 +32,7 @@ const HomeBlogs = () => {
                         {sortedBlogs.slice(0, 1).map(blog => (
                             <a key={blog.title} rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
                                 <Link to={`/blogDetails/${blog._id}`} className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500  " >
-                                    <img src={blog.image} alt={blog.title} />
+                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover"/>
                                 </Link>
                                 <div className="p-6 space-y-2 lg:col-span-5">
                                     <Link to={`/blogDetails/${blog._id}`}>
