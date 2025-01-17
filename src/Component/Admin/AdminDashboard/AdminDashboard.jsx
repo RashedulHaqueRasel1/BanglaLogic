@@ -57,8 +57,6 @@ const AdminDashboard = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // if (isLoading) return <span className="loading loading-ring loading-lg text-red-400 text-center"></span>;
-
 
     return (
         <div className="flex h-screen bg-gray-100">
@@ -132,21 +130,12 @@ const AdminDashboard = () => {
                 <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-4 py-10 lg:py-0">
 
 
-                    <p className="font-bold">{time}</p>
+                    <div>
+                        <p className="font-bold">{time}</p>
 
-                    <div className="flex flex-col items-center justify-center">
-                        {/* User Profile */}
                         <div className="flex flex-col items-center justify-center">
                             {/* User Profile */}
-                            <div className="dropdown dropdown-end ml-8  ">
-                                <div tabIndex={0} role="button" className=" btn-circle avatar tooltip tooltip-left" data-tip="Rasel" >
-                                    <div className="w-10 rounded-full " >
-                                        <img alt="" src="name" />
-                                    </div>
-                                </div>
-
-
-                            </div>
+         
                         </div>
                     </div>
 

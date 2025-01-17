@@ -127,7 +127,7 @@ const Dashboard = () => {
                                     </td>
 
                                     <Link to={``}>
-                                        <button className="border py-2 px-2 mt-2 text-black font-semibold bg-blue-400 rounded-xl cursor-pointer">See Blog</button >
+                                        <button className="border py-2 px-2 mt-2 text-black font-semibold bg-blue-400 rounded-xl cursor-pointer hover:bg-transparent">See Blog</button >
                                     </Link>
 
                                 </tr>

@@ -14,11 +14,19 @@ const Blogs = () => {
     const [blogs, loading] = useAllBlogs();
     // console.log(blogs)
 
+    const sortedBlogs = blogs?.sort((a, b) => {
+        const dateA = new Date(a.date.split("/").reverse().join("-"));
+        const dateB = new Date(b.date.split("/").reverse().join("-"));
+        return dateB - dateA;
+    });
+
+
+
     // pagination funsonality
     const itemsPerPage = 6;
-    const totalPages = Math.ceil(blogs.length / itemsPerPage);
+    const totalPages = Math.ceil(sortedBlogs.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentProducts = blogs.slice(startIndex, startIndex + itemsPerPage);
+    const currentProducts = sortedBlogs.slice(startIndex, startIndex + itemsPerPage);
 
     const handlePageClick = (pageNumber) => {
         setCurrentPage(pageNumber);
