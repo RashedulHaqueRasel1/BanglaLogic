@@ -1,19 +1,25 @@
-import {useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { FaCalendarAlt, FaCopy, } from "react-icons/fa";
 import useAllBlogs from "../../../hooks/useAllBlogs/useAllBlogs";
-
+import sanitizeHtml from 'sanitize-html';
 
 const BlogDetails = () => {
     const blogDetails = useLoaderData();
     const [blogs, loading] = useAllBlogs();
 
 
+
     const { title, description, image } = blogDetails;
 
-    const recentBlogs = [...blogs].sort(
-        (a, b) => new Date(b.publishDate) - new Date(a.publishDate)
-    );
+
+    // Sort blogs by date in descending order (most recent first)
+    const recentBlogs = blogs?.sort((a, b) => {
+        const dateA = new Date(a.date.split("/").reverse().join("-"));
+        const dateB = new Date(b.date.split("/").reverse().join("-"));
+        return dateB - dateA;
+    });
+
 
     // Copy blog url
     const handleCopyLink = () => {
@@ -28,6 +34,27 @@ const BlogDetails = () => {
             });
     };
 
+    // Allowed tags
+    const sanitizedDescription = sanitizeHtml(description, {
+        allowedTags: [
+            'p', 'ol', 'li', 'strong', 'em', 'u', 'img', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'b', 'i', 'span', 'div', 'code', 'pre', 'blockquote', 'table', 'thead', 'tbody', 'tr', 'td', 'th'
+        ],
+        allowedAttributes: {
+            '*': ['*'],
+            'a': ['href', 'target', 'rel'],
+            'img': ['src', 'alt', 'width', 'height'],
+            'p': ['style'],
+            'h1': ['style'],
+            'h2': ['style'],
+            'h3': ['style'],
+            'h4': ['style'],
+            'h5': ['style'],
+            'h6': ['style'],
+            'table': ['style'],
+            'td': ['style'],
+            'th': ['style']
+        }
+    });
 
 
 
@@ -59,8 +86,10 @@ const BlogDetails = () => {
                             {title}
                         </h1>
 
-                        <img src={image} alt="GifTap has No Photo" className="w-full h-[700px] object-cover rounded-lg" />
-                        <p className="text-gray-700 dark:text-gray-700  text-xl mt-8">{description}</p>
+                        <img src={image} alt="Bangla Logic has No Photo" className="w-full h-[700px] object-cover rounded-lg" />
+
+                        {/* Blog Description */}
+                        <div dangerouslySetInnerHTML={{ __html: sanitizedDescription }} />
                     </div>
                 </div>
 

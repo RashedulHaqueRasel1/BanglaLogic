@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useAllBlogs from "../../../hooks/useAllBlogs/useAllBlogs";
+import DangerousHTML from 'react-dangerous-html';
 
 
 const HomeBlogs = () => {
@@ -30,22 +31,23 @@ const HomeBlogs = () => {
 
                     <div className="mt-6">
                         {sortedBlogs.slice(0, 1).map(blog => (
-                            <a key={blog.title} rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
+                            <Link key={blog.title}  to={`/blogDetails/${blog._id}`} className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
                                 <Link to={`/blogDetails/${blog._id}`} className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500  " >
-                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover"/>
+                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover" />
                                 </Link>
                                 <div className="p-6 space-y-2 lg:col-span-5">
                                     <Link to={`/blogDetails/${blog._id}`}>
                                         <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">{blog.title}</h3>
                                     </Link>
                                     <span className="text-xs dark:text-gray-600">{blog.date}</span>
-                                    <p className="opacity-70">{blog.description.slice(0, 500)}...
-                                        <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
-                                            Read More
-                                        </Link>
-                                    </p>
+
+                                    <DangerousHTML html={blog.description.slice(0, 350)} /> . . .
+                                    <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
+                                        Read More
+                                    </Link>
+
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,7 +55,7 @@ const HomeBlogs = () => {
 
                         {
                             sortedBlogs.slice(1, 4).map(blog => (
-                                <a key={blog.title} rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
+                                <div key={blog.title} rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
                                     <Link to={`/blogDetails/${blog._id}`}>
                                         <img className="w-full h-80 object-cover mb-2 transition-transform duration-700 ease-in-out group-hover:scale-105 rounded-lg" src={blog.image} />
                                     </Link>
@@ -62,13 +64,14 @@ const HomeBlogs = () => {
                                             <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{blog.title}</h3>
                                         </Link>
                                         <span className="text-xs dark:text-gray-600">{blog.date}</span>
-                                        <p className="opacity-70">{blog.description.slice(0, 110)}...
-                                            <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
-                                                Read More
-                                            </Link>
-                                        </p>
+
+                                        <DangerousHTML html={blog.description.slice(0, 50)} /> . . .
+                                        <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
+                                            Read More
+                                        </Link>
+
                                     </div>
-                                </a>
+                                </div>
                             ))
                         }
 

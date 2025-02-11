@@ -34,6 +34,7 @@ export const router = createBrowserRouter([
         path: '/adminLogin',
         element: <Login></Login>
       },
+ 
 
     ]
   },

@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { CgCalendarDates } from "react-icons/cg";
 import { useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import DangerousHTML from 'react-dangerous-html';
 
 
 const Blogs = () => {
@@ -120,12 +121,17 @@ const Blogs = () => {
                             </span>
                         </div>
 
-                        <p className="text-gray-700 dark:text-gray-700 font-opensans">
+                        {/* <p className="text-gray-700 dark:text-gray-700 font-opensans">
                             {blog.description.slice(0, 110)}...
                             <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
                                 Read More
                             </Link>
-                        </p>
+                        </p> */}
+
+                        <DangerousHTML html={blog.description.slice(0, 150)} /> . . .
+                        <Link to={`/blogDetails/${blog._id}`} className="text-red-500">
+                            Read More
+                        </Link>
                     </div>
                 ))}
             </div>

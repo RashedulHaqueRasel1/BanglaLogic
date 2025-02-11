@@ -5,6 +5,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic";
+import DangerousHTML from 'react-dangerous-html';
 
 
 const AllBlogs = () => {
@@ -139,10 +140,11 @@ const AllBlogs = () => {
                                         <img src={stat.image} alt={stat.title} className="h-16 w-20 rounded-lg" />
                                     </td>
                                     <td className="px-6 py-4">
-                                        {stat.title}
+                                        <Link to={`/blogDetails/${stat._id}`} className="hover:underline"> {stat.title} </Link>
                                     </td>
                                     <td className="px-6 py-4">
-                                        {stat.description.slice(0, 50)}...
+                                        {/* {stat.description.slice(0, 50)}... */}
+                                         <DangerousHTML html={stat.description.slice(0, 50)} />
                                     </td>
                                     <td className="px-6 py-4">
                                         {stat.date}
